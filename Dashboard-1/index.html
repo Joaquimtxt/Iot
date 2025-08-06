@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Dashboard-MQTT</title>
+</head>
+<body>
+<div class="container">
+    <div class="dados">
+        <h2>🌡️ Monitor DHT22</h2>
+        <p><strong>Temperatura</strong> <span id="temp">--</span></p>
+        <p><strong>Umidade</strong> <span id="umid">--</span></p>
+    </div>
+    <div class="controle">
+  <h2>Controle dos LEDs</h2>
+<div class="led-controls">
+    <div> 
+        <h4>🟢LED 1</h4>
+        <button onclick="enviarComando('led1', 'ON')">Ligar</button>
+        <button onclick="enviarComando('led1', 'OFF')">Desligar</button>
+    </div>
+   
+    <div> 
+        <h4>🔵LED 2</h4>
+        <button onclick="enviarComando('led2', 'ON')">Ligar</button>
+        <button onclick="enviarComando('led2', 'OFF')">Desligar</button>
+    </div>
+</div>    
+</div>
+</div>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.0.1/mqttws31.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
